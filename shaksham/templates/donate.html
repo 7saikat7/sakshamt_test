@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saksham is a NGO working towards making the families 
+    of the jaccused and prisoners in jail self independent economically so that they don't become
+     the passive victim of punishment given by law.">
+    <title>Saksham: Legal Aid Society</title>
+    <link rel="shortcut icon" href="{% static 'dist/img/favicon.ico'%}">
+    <link rel="stylesheet" href="{% static 'Depd/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'stylesheets/donate.css'%}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="{% url 'home' %}"><img src="{% static 'dist/img/kyan.png'%}" id="logo-image">&nbsp;<span id="logo-text">Saksham</span></a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="donate">Donate<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Apply</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More...
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">About US</a>
+                    <a class="dropdown-item" href="#">BLog</a>
+                    <a class="dropdown-item" href="#">Gallery</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-warning" type="button" style="color: black;" href='{% url 'login' %}'>Join Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <div class="container">
+        <div class="row" id="title">
+          <img src="{% static 'images/paypal_monochromatic.svg' %}" class="img-fluid">
+        </div>
+        <div class="row">
+            <div class="col-12" id="donate">
+                Donate!
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-12 col-md-9">
+                <form id="form-card">
+                    <div class="form-group row">
+                        <label for="email" class=" offset-sm-2 col-md-2 col-form-label">
+                            Email
+                        </label>
+                        <div class="col-md-5">
+                            <input id="email" type="text" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Name" class="offset-sm-2 col-md-2 col-form-label">
+                            Name
+                        </label>
+                        <div class="col-md-5">
+                            <input id="Name" type="text" class="form-control" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-5 offset-4 col-md-3">
+                            <button type="submit" class="btn" id="form-submit">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'Depd/jquery.slim.min.js'%}"> </script>
+    <script src="{% static 'Depd/popper.min.js'%}"></script>
+    <script src="{% static 'Depd/bootstrap.min.js'%}"></script>
+    <script src="{% static 'scripts/index.js'%}"></script>
+</body>
+</html>

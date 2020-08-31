@@ -1,0 +1,22 @@
+
+welcome to signup page
+<head>
+<h1>signup page</h1>
+</head>
+<body>
+<form method="POST">
+    {{ name }}
+    <br>
+    {{ error }}
+    <br>
+    {% csrf_token %}
+    username:<input type="text" name="username">
+    email:<input type="text" name="email">
+    password:<input type="password" name="password">
+    re_type password:<input type="password" name="re_type_password">
+    <input type="submit">
+    <br>
+    <a href="/">home2</a>
+    <br>
+</form>
+</body>
